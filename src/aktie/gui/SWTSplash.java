@@ -53,7 +53,7 @@ public class SWTSplash extends Dialog
 
         Label lblNewLabel = new Label ( container, SWT.NONE );
         lblNewLabel.setLayoutData ( new GridData ( SWT.CENTER, SWT.CENTER, true, false, 1, 1 ) );
-        lblNewLabel.setText ( "Please wait while Aktie starts..." );
+        lblNewLabel.setText ( "Please wait while Aktie is starting up..." );
 
         Label lblItCanTake = new Label ( container, SWT.NONE );
         lblItCanTake.setLayoutData ( new GridData ( SWT.CENTER, SWT.CENTER, false, false, 1, 1 ) );
@@ -61,7 +61,7 @@ public class SWTSplash extends Dialog
 
         Label lblIfYouSelected = new Label ( container, SWT.NONE );
         lblIfYouSelected.setLayoutData ( new GridData ( SWT.CENTER, SWT.CENTER, false, false, 1, 1 ) );
-        lblIfYouSelected.setText ( "If you selected to use and external router make sure it is running." );
+        lblIfYouSelected.setText ( "If you have selected to use an external router, make sure it is running." );
 
         if ( splashImg != null )
         {
