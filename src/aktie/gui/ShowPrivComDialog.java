@@ -61,7 +61,7 @@ public class ShowPrivComDialog extends Dialog
         container.setLayout ( new GridLayout ( 2, false ) );
 
         Label lblCommunitiesYouAre = new Label ( container, SWT.NONE );
-        lblCommunitiesYouAre.setText ( "Private communities you are not a member of (locked)." );
+        lblCommunitiesYouAre.setText ( "Private communities of which you are not a member (locked)." );
         new Label ( container, SWT.NONE );
 
         Label lblRequestAccessFrom = new Label ( container, SWT.NONE );
