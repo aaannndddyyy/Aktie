@@ -201,7 +201,7 @@ public class Wrapper
 
         if ( !f.isDirectory() )
         {
-            System.out.println ( "Oops.  I sorry.  I thought aktie should be a directory!" );
+            System.out.println ( "Oops,  I'm sorry.  I thought aktie were a directory!" );
             System.exit ( 1 );
         }
 
@@ -334,7 +334,7 @@ public class Wrapper
                 ln = is.read ( buf );
             }
 
-            System.out.println ( "EXITING.." );
+            System.out.println ( "EXITING..." );
 
             try
             {
@@ -608,7 +608,7 @@ public class Wrapper
                         {
                             if ( !df.delete() )
                             {
-                                System.out.println ( "WARNING: COULD NOT REMOVE " + df + " Please do so manually." );
+                                System.out.println ( "WARNING: COULD NOT REMOVE " + df + ". Please do so manually." );
                             }
 
                         }
@@ -626,7 +626,7 @@ public class Wrapper
             zis.closeEntry();
             zis.close();
 
-            System.out.println ( "Done Upgrading" );
+            System.out.println ( "Upgrade done" );
 
         }
 
@@ -734,7 +734,7 @@ public class Wrapper
 
     public static String getLastDevMessage()
     {
-        String msg = "Developer messages.";
+        String msg = "Developer's messages.";
 
         Properties p = loadExistingProps();
 
@@ -1089,13 +1089,13 @@ public class Wrapper
         String path = NODEDIR + File.separator + NO_SHARE_FNAMES_FILE;
 
         List<String> lines = new LinkedList<String>();
-        lines.add ( "# This config file contains file names that should not be shared" );
+        lines.add ( "# This config file contains names of files which should not be shared" );
         lines.add ( "# by Aktie even if a share contains files with such a name." );
         lines.add ( "#" );
-        lines.add ( "# Each file name needs to be listed on a new line" );
+        lines.add ( "# Each file name needs to be listed in a new line" );
         lines.add ( "# without any leading or trailing whitespace." );
         lines.add ( "#" );
-        lines.add ( "# The file name may not contain the system specific path separator" );
+        lines.add ( "# The file name may not contain the system-specific path separator" );
         lines.add ( "# (usually '/' or '\') and should not start with '#'." );
         lines.add ( "# Malformed file names are ignored by Aktie." );
         lines.add ( "#" );
@@ -1185,10 +1185,10 @@ public class Wrapper
         String path = NODEDIR + File.separator + NO_SHARE_EXTS_FILE;
 
         List<String> lines = new LinkedList<String>();
-        lines.add ( "# This config file contains file extensions that should not be shared" );
+        lines.add ( "# This config file contains extensions of file types that should not be shared" );
         lines.add ( "# by Aktie even if a share contains files with such an extension." );
         lines.add ( "#" );
-        lines.add ( "# Each extension needs to be listed on a separate line" );
+        lines.add ( "# Each extension needs to be listed in a separate line" );
         lines.add ( "# without leading or trailing whitespace." );
         lines.add ( "#" );
         lines.add ( "# A file extension needs to start with a '.'" );
@@ -1196,7 +1196,7 @@ public class Wrapper
         lines.add ( "# Other characters should not be part of a file extension." );
         lines.add ( "# Malformed file extensions are ignored by Aktie." );
         lines.add ( "#" );
-        lines.add ( "# The extensions '.aktiepart' and '.aktiebackup' are never shared" );
+        lines.add ( "# The '.aktiepart' and '.aktiebackup' files are never shared" );
         lines.add ( "# by Aktie and do not need to be specified here." );
         lines.add ( "#" );
         lines.addAll ( validFileExtensions  );
@@ -1265,7 +1265,7 @@ public class Wrapper
         System.out.println ( "Testing doNotShareFileNames" );
         System.out.println();
 
-        System.out.println ( "Loading from config file ..." );
+        System.out.println ( "Loading from config file..." );
         List<String> fnames = getDoNotShareFileNames();
 
         System.out.println ( "Valid file names in config file:" );
@@ -1282,8 +1282,8 @@ public class Wrapper
         newFnames.add ( "Desktop.ini" );
         newFnames.add ( ".DS_Store" );
         newFnames.add ( "# invalid since comment" );
-        newFnames.add ( "invalid on Unix-like since speparator / contained" );
-        newFnames.add ( "invalid on Windows since speparator \\ contained" );
+        newFnames.add ( "invalid on Unix-like since separator / contained" );
+        newFnames.add ( "invalid on Windows since speparator \ contained" );
         System.out.println();
 
         System.out.println ( "File names for testing saving to config file:" );
@@ -1295,7 +1295,7 @@ public class Wrapper
 
         System.out.println();
 
-        System.out.println ( "Saving to config file ..." );
+        System.out.println ( "Saving to config file..." );
         saveDoNotShareFileNames ( newFnames );
         System.out.println();
 
@@ -1312,7 +1312,7 @@ public class Wrapper
 
         System.out.println ( "Testing doNotShareFileExtensions" );
         System.out.println();
-        System.out.println ( "Loading from config file ..." );
+        System.out.println ( "Loading from config file..." );
         List<String> exts = getDoNotShareFileExtensions();
 
         System.out.println ( "Valid file extensions in config file:" );
@@ -1340,7 +1340,7 @@ public class Wrapper
         newExts.add ( "  .leading_space" );
         newExts.add ( ".trailing_space  " );
         newExts.add ( ".avi" );
-        newExts.add ( ".mp4" );
+        newExts.add ( ".mp3" );
         newExts.add ( "Desktop.ini" );
 
         System.out.println ( "File extensions for testing saving to config file:" );
@@ -1352,7 +1352,7 @@ public class Wrapper
 
         System.out.println();
 
-        System.out.println ( "Saving to config file ..." );
+        System.out.println ( "Saving to config file..." );
         saveDoNotShareFileExtensions ( newExts );
         System.out.println();
 
