@@ -275,7 +275,7 @@ public class NewCommunityDialog extends Dialog
         txtUse.setText ( "We recommend creating communities with your \"anon\" identity.\n"
                          + "Then you can grant your named identities membership as you wish.\n"
                          + "See here for more information:\n"
-                         + "https://github.com/retsamknaps/aktie/wiki/Creating-communities-with-anon" );
+                         + "https://github.com/retsamknaps/aktie/wiki/Creating-communities-with-anon (clearnet link!!)" );
         txtUse.setLayoutData ( new GridData ( SWT.FILL, SWT.FILL, true, false, 1, 1 ) );
 
         return container;
