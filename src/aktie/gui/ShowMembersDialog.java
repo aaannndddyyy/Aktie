@@ -51,7 +51,7 @@ public class ShowMembersDialog extends Dialog
 
         lblMembersOfCommunity = new Label ( container, SWT.NONE );
         lblMembersOfCommunity.setLayoutData ( new GridData ( SWT.FILL, SWT.CENTER, true, false, 1, 1 ) );
-        lblMembersOfCommunity.setText ( "Members of Community: " );
+        lblMembersOfCommunity.setText ( "Members of the Community " );
 
         memberTableViewer = new TableViewer ( container, SWT.BORDER |
                                               SWT.FULL_SELECTION | SWT.V_SCROLL | SWT.H_SCROLL );
@@ -185,7 +185,7 @@ public class ShowMembersDialog extends Dialog
     private void doMemSearch()
     {
         String name = selectedCommunity.getPrivate ( CObj.NAME );
-        String lablestr = "Members of Community: " + name;
+        String lablestr = "Members of the Community " + name;
 
         CObjList ol = ( CObjList ) memberTableViewer.getInput();
 
