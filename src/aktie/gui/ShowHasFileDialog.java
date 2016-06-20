@@ -60,7 +60,7 @@ public class ShowHasFileDialog extends Dialog
 
         lblNodesHaveFile = new Label ( container, SWT.NONE );
         lblNodesHaveFile.setLayoutData ( new GridData ( SWT.FILL, SWT.CENTER, true, false, 1, 1 ) );
-        lblNodesHaveFile.setText ( "Nodes have file: <file>" );
+        lblNodesHaveFile.setText ( "Nodes which have file: <file>" );
 
         tableViewer = new TableViewer ( container, SWT.BORDER | SWT.FULL_SELECTION );
         tableViewer.setContentProvider ( new CObjListIdentPubContentProvider (
@@ -74,7 +74,7 @@ public class ShowHasFileDialog extends Dialog
         table.setMenu ( menu );
 
         MenuItem mntmSetRank = new MenuItem ( menu, SWT.NONE );
-        mntmSetRank.setText ( "Set Selected User(s) Rank" );
+        mntmSetRank.setText ( "Set Rank for Selected User(s)" );
         mntmSetRank.addSelectionListener ( new SelectionListener()
         {
             @Override
@@ -163,7 +163,7 @@ public class ShowHasFileDialog extends Dialog
             if ( !table.isDisposed() && !lblNodesHaveFile.isDisposed() && showsf )
             {
                 String fname = fileo.getString ( CObj.NAME );
-                lblNodesHaveFile.setText ( "Nodes have file: " + fname );
+                lblNodesHaveFile.setText ( "Nodes which have file: " + fname );
 
                 CObjList ol = ( CObjList ) tableViewer.getInput();
 
