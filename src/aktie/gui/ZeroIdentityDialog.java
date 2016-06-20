@@ -90,7 +90,7 @@ public class ZeroIdentityDialog extends Dialog
         table.setMenu ( menu );
 
         MenuItem mntmSetRank = new MenuItem ( menu, SWT.NONE );
-        mntmSetRank.setText ( "Set Selected User(s) Rank" );
+        mntmSetRank.setText ( "Set Rank for Selected User(s)" );
         mntmSetRank.addSelectionListener ( new SelectionListener()
         {
             @Override
